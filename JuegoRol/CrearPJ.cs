@@ -30,7 +30,7 @@ namespace JuegoRol
 
         private Personaje CrearPersonaje()
         {
-            Tipos Aux;
+            Tipos Aux = Tipos.Humano;
             switch (comboBox1.SelectedItem)
             {
                 case "Personaje del bosque":
