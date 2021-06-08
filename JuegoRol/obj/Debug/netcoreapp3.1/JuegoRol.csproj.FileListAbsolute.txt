@@ -1,0 +1,15 @@
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\bin\Debug\netcoreapp3.1\JuegoRol.exe
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\bin\Debug\netcoreapp3.1\JuegoRol.deps.json
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\bin\Debug\netcoreapp3.1\JuegoRol.runtimeconfig.json
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\bin\Debug\netcoreapp3.1\JuegoRol.runtimeconfig.dev.json
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\bin\Debug\netcoreapp3.1\JuegoRol.dll
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\bin\Debug\netcoreapp3.1\JuegoRol.pdb
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.csprojAssemblyReference.cache
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.CrearPJ.resources
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.csproj.GenerateResource.cache
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.AssemblyInfoInputs.cache
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.AssemblyInfo.cs
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.csproj.CoreCompileInputs.cache
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.dll
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.pdb
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.genruntimeconfig.cache
