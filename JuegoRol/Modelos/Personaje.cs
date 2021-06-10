@@ -46,16 +46,15 @@ namespace JuegoRol
             Nivel = 1;
         }
 
-        public void Ataque(Personaje enemigo)
-        {
-            Random aleatorio = new Random();
-            //int poderDisparo = Destreza * Fuerza * Nivel;
-            //int efectividadDisparo = aleatorio.Next(1, 100) * 100;
-            //int valorDeAtaque = poderDisparo * efectividadDisparo;
-            //int poderDefensa = enemigo.Armadura * enemigo.Velocidad;
-            //int dañoProvocado = ((valorDeAtaque * efectividadDisparo - poderDefensa) / 50000) * 100;
+        public void Ataque(Personaje enemigo) { 
+        
+            int PoderDisparo = Destreza * Fuerza * Nivel;
+            int EfectividadDisparo = (new Random().Next(1, 100));
+            int ValorAtaque = PoderDisparo * EfectividadDisparo;
+            int PoderDefensa = enemigo.Armadura * enemigo.Velocidad;
+            int DañoProvocado = (((ValorAtaque * EfectividadDisparo) - PoderDefensa) / 5000);
 
-            enemigo.Salud = enemigo.Salud - aleatorio.Next(0,50);
+            enemigo.Salud -= DañoProvocado;
         }
 
         public string MostrarPersonaje()

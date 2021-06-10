@@ -18,7 +18,6 @@ namespace JuegoRol
             InitializeComponent();
             Peleadores = Personajes;
             ActualizarDatos(Peleadores);
-
         }
 
         private void EvaluarGanador(List<Personaje> Peleadores)

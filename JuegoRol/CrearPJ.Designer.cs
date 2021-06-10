@@ -42,6 +42,7 @@ namespace JuegoRol
             this.num_edad = new System.Windows.Forms.NumericUpDown();
             this.listbox_personajes = new System.Windows.Forms.ListBox();
             this.btn_pelea = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.num_edad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,11 +156,22 @@ namespace JuegoRol
             this.btn_pelea.UseVisualStyleBackColor = true;
             this.btn_pelea.Click += new System.EventHandler(this.btn_pelea_Click);
             // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Location = new System.Drawing.Point(521, 412);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminar.TabIndex = 14;
+            this.btn_eliminar.Text = "Borrar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
             // CrearPJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_pelea);
             this.Controls.Add(this.listbox_personajes);
             this.Controls.Add(this.num_edad);
@@ -196,6 +208,7 @@ namespace JuegoRol
         private System.Windows.Forms.NumericUpDown num_edad;
         private System.Windows.Forms.ListBox listbox_personajes;
         private System.Windows.Forms.Button btn_pelea;
+        private System.Windows.Forms.Button btn_eliminar;
     }
 }
 

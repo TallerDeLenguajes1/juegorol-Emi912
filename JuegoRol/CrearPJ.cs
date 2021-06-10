@@ -93,5 +93,20 @@ namespace JuegoRol
 
             
         }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            if (listbox_personajes.SelectedIndex != -1)
+            {
+                int indice;
+                indice = listbox_personajes.SelectedIndex;
+                listbox_personajes.Items.RemoveAt(indice);
+                Personajes.RemoveAt(indice);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar a que personaje borrar");
+            }
+        }
     }
 }
