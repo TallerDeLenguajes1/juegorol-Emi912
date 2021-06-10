@@ -5,7 +5,7 @@ using System.Text;
 namespace JuegoRol
 {
 
-    public enum Tipos
+    public enum TipoPersonaje
     {
         PersonajeDelBosque,
         Humano,
@@ -17,7 +17,7 @@ namespace JuegoRol
     {
 
         private string nombre;
-        private Tipos tipo;
+        private TipoPersonaje tipo;
         private string apodo;
         private DateTime fechaDeNacimiento;
         private int edad;
@@ -30,7 +30,7 @@ namespace JuegoRol
         private int nivel;
         private int fuerza;
 
-        public Personaje(string nombre, Tipos tipo, string apodo, DateTime _fechaDeNacimiento, int edad)
+        public Personaje(string nombre, TipoPersonaje tipo, string apodo, DateTime _fechaDeNacimiento, int edad)
         {
             Random random = new Random();
             Nombre = nombre;
@@ -44,7 +44,23 @@ namespace JuegoRol
             Armadura = random.Next(1, 10);
             Fuerza = random.Next(1, 10);
             Nivel = 1;
+        }
 
+        public void Ataque(Personaje enemigo)
+        {
+            Random aleatorio = new Random();
+            //int poderDisparo = Destreza * Fuerza * Nivel;
+            //int efectividadDisparo = aleatorio.Next(1, 100) * 100;
+            //int valorDeAtaque = poderDisparo * efectividadDisparo;
+            //int poderDefensa = enemigo.Armadura * enemigo.Velocidad;
+            //int dañoProvocado = ((valorDeAtaque * efectividadDisparo - poderDefensa) / 50000) * 100;
+
+            enemigo.Salud = enemigo.Salud - aleatorio.Next(0,50);
+        }
+
+        public string MostrarPersonaje()
+        {
+            return "Nivel: "+ Nivel + " Apodo: " +  Apodo + " Tipo: "+ Tipo;
         }
 
         public int Velocidad { get => velocidad; set => velocidad = value; }
@@ -56,7 +72,7 @@ namespace JuegoRol
         public string Apodo { get => apodo; set => apodo = value; }
         public DateTime FechaDeNacimiento { get => fechaDeNacimiento; set => fechaDeNacimiento = value; }
         public int Edad { get => edad; set => edad = value; }
-        public Tipos Tipo { get => tipo; set => tipo = value; }
+        public TipoPersonaje Tipo { get => tipo; set => tipo = value; }
         public int Salud { get => salud; set => salud = value; }
     }
 }

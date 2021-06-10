@@ -13,3 +13,4 @@ C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\Ju
 C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.dll
 C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.pdb
 C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.genruntimeconfig.cache
+C:\Users\Emilio\source\repos\juegorol-Emi912\JuegoRol\obj\Debug\netcoreapp3.1\JuegoRol.F_Pelea.resources

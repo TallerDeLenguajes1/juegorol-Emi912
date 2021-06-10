@@ -4,5 +4,8 @@
     <Compile Update="CrearPJ.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="F_Pelea.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

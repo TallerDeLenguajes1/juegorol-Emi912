@@ -40,6 +40,8 @@ namespace JuegoRol
             this.dt_nacimiento = new System.Windows.Forms.DateTimePicker();
             this.btn_crear = new System.Windows.Forms.Button();
             this.num_edad = new System.Windows.Forms.NumericUpDown();
+            this.listbox_personajes = new System.Windows.Forms.ListBox();
+            this.btn_pelea = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.num_edad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,11 +136,32 @@ namespace JuegoRol
             this.num_edad.Size = new System.Drawing.Size(120, 23);
             this.num_edad.TabIndex = 11;
             // 
+            // listbox_personajes
+            // 
+            this.listbox_personajes.FormattingEnabled = true;
+            this.listbox_personajes.ItemHeight = 15;
+            this.listbox_personajes.Location = new System.Drawing.Point(469, 41);
+            this.listbox_personajes.Name = "listbox_personajes";
+            this.listbox_personajes.Size = new System.Drawing.Size(286, 364);
+            this.listbox_personajes.TabIndex = 12;
+            // 
+            // btn_pelea
+            // 
+            this.btn_pelea.Location = new System.Drawing.Point(292, 269);
+            this.btn_pelea.Name = "btn_pelea";
+            this.btn_pelea.Size = new System.Drawing.Size(75, 23);
+            this.btn_pelea.TabIndex = 13;
+            this.btn_pelea.Text = "¡Pelea!";
+            this.btn_pelea.UseVisualStyleBackColor = true;
+            this.btn_pelea.Click += new System.EventHandler(this.btn_pelea_Click);
+            // 
             // CrearPJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_pelea);
+            this.Controls.Add(this.listbox_personajes);
             this.Controls.Add(this.num_edad);
             this.Controls.Add(this.btn_crear);
             this.Controls.Add(this.dt_nacimiento);
@@ -171,6 +194,8 @@ namespace JuegoRol
         private System.Windows.Forms.DateTimePicker dt_nacimiento;
         private System.Windows.Forms.Button btn_crear;
         private System.Windows.Forms.NumericUpDown num_edad;
+        private System.Windows.Forms.ListBox listbox_personajes;
+        private System.Windows.Forms.Button btn_pelea;
     }
 }
 
