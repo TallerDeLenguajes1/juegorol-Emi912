@@ -23,7 +23,7 @@ namespace JuegoRol
         private void EvaluarGanador(List<Personaje> Peleadores)
         {
 
-            if (ContClick == 3 || Peleadores[0].Salud <= 0 || Peleadores[1].Salud <= 0)
+            if (IsGanador())
             {
                 if (Peleadores[0].Salud > Peleadores[1].Salud)
                 {
@@ -58,6 +58,11 @@ namespace JuegoRol
 
 
 
+        }
+
+        private bool IsGanador()
+        {
+            return ContClick == 3 || Peleadores[0].Salud <= 0 || Peleadores[1].Salud <= 0;
         }
         private void ActualizarDatos(List<Personaje> Peleadores)
         {

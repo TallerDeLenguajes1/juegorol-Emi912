@@ -36,10 +36,16 @@ namespace JuegoRol
                 Personaje NuevoPersonaje = CrearPersonaje();
                 Personajes.Add(NuevoPersonaje);
                 listbox_personajes.Items.Add(NuevoPersonaje.MostrarPersonaje());
-              
-                txt_Nombre.Clear();
-                txt_Apodo.Clear();
+                LimpiarCampos();
+            
             }
+        }
+
+        private void LimpiarCampos()
+        {
+            txt_Nombre.Clear();
+            txt_Apodo.Clear();
+
         }
 
 
