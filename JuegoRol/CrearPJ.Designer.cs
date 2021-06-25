@@ -141,9 +141,9 @@ namespace JuegoRol
             // 
             this.listbox_personajes.FormattingEnabled = true;
             this.listbox_personajes.ItemHeight = 15;
-            this.listbox_personajes.Location = new System.Drawing.Point(469, 41);
+            this.listbox_personajes.Location = new System.Drawing.Point(415, 42);
             this.listbox_personajes.Name = "listbox_personajes";
-            this.listbox_personajes.Size = new System.Drawing.Size(286, 364);
+            this.listbox_personajes.Size = new System.Drawing.Size(419, 364);
             this.listbox_personajes.TabIndex = 12;
             // 
             // btn_pelea
@@ -170,7 +170,7 @@ namespace JuegoRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1103, 450);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_pelea);
             this.Controls.Add(this.listbox_personajes);

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using JuegoRol.Modelos;
+
 
 namespace JuegoRol
 {
-
+    
     public enum TipoPersonaje
     {
         PersonajeDelBosque,
@@ -15,13 +17,14 @@ namespace JuegoRol
     }
     public class Personaje
     {
-
+        
         private string nombre;
         private TipoPersonaje tipo;
         private string apodo;
         private DateTime fechaDeNacimiento;
         private int edad;
         private int salud = 100;
+        private string equipacion;
     
 
         private int velocidad;
@@ -44,22 +47,26 @@ namespace JuegoRol
             Armadura = random.Next(1, 10);
             Fuerza = random.Next(1, 10);
             Nivel = 1;
+            Equipacion = Api.GetEquipment()[random.Next(0,60)].Name;
         }
 
-        public void Ataque(Personaje enemigo) { 
-        
-            int PoderDisparo = Destreza * Fuerza * Nivel;
-            int EfectividadDisparo = (new Random().Next(1, 100));
-            int ValorAtaque = PoderDisparo * EfectividadDisparo;
-            int PoderDefensa = enemigo.Armadura * enemigo.Velocidad;
-            int DañoProvocado = (((ValorAtaque * EfectividadDisparo) - PoderDefensa) / 5000);
+        public void Ataque(Personaje enemigo) {
+            Random aleatorio = new Random();
+            //int poderdisparo = Destreza * Fuerza * Nivel;
+            //int efectividaddisparo = (aleatorio.Next(1, 100));
+            //int valorataque = poderdisparo * efectividaddisparo;
+            //int poderdefensa = enemigo.Armadura * enemigo.Velocidad;
+            //int dañoprovocado = (((valorataque * efectividaddisparo) - poderdefensa) / 50000) * 100;
 
-            enemigo.Salud -= DañoProvocado;
+            enemigo.Salud -= aleatorio.Next(0,50);
+            
         }
 
-        public string MostrarPersonaje()
+
+        public override string ToString()
         {
-            return "Nivel: "+ Nivel + " Apodo: " +  Apodo + " Tipo: "+ Tipo;
+           return "Nivel: " + Nivel + " Apodo: " + Apodo + " Tipo: " + Tipo + " Arma: " + Equipacion;
+
         }
 
         public int Velocidad { get => velocidad; set => velocidad = value; }
@@ -73,5 +80,6 @@ namespace JuegoRol
         public int Edad { get => edad; set => edad = value; }
         public TipoPersonaje Tipo { get => tipo; set => tipo = value; }
         public int Salud { get => salud; set => salud = value; }
+        public string Equipacion { get => equipacion; set => equipacion = value; }
     }
 }

@@ -35,7 +35,7 @@ namespace JuegoRol
             {
                 Personaje NuevoPersonaje = CrearPersonaje();
                 Personajes.Add(NuevoPersonaje);
-                listbox_personajes.Items.Add(NuevoPersonaje.MostrarPersonaje());
+                listbox_personajes.Items.Add(NuevoPersonaje.ToString());
                 LimpiarCampos();
             
             }
@@ -93,7 +93,8 @@ namespace JuegoRol
                 F_Pelea pelea = new F_Pelea(Personajes);
                 pelea.ShowDialog();
                 listbox_personajes.Items.Clear();
-                Personajes.Clear();
+                cargarDatosAListbox();
+                
             }
 
 
@@ -112,6 +113,14 @@ namespace JuegoRol
             else
             {
                 MessageBox.Show("Debe seleccionar a que personaje borrar");
+            }
+        }
+
+        private void cargarDatosAListbox()
+        {
+            foreach (Personaje persona in Personajes)
+            {
+                listbox_personajes.Items.Add(persona.MostrarPersonaje());
             }
         }
     }
