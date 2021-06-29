@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JuegoRol.Modelos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace JuegoRol
     public partial class CrearPJ : Form
     {
         List<Personaje> Personajes = new List<Personaje>();
+        List<Equipment> Equipamientos = new List<Equipment>();
         public CrearPJ()
         {
             InitializeComponent();
@@ -23,6 +25,8 @@ namespace JuegoRol
             comboBox1.Items.Add("Elfo");
             comboBox1.SelectedIndex = 0;
             num_edad.Value = 20;
+            ApiDeEquipamiento api = new ApiDeEquipamiento();
+            Equipamientos = api.ListadoDeEquipamiento; //.GetEquipment()
         }
 
         private void btn_crear_Click(object sender, EventArgs e)
@@ -52,6 +56,7 @@ namespace JuegoRol
 
         private Personaje CrearPersonaje()
         {
+            Random random = new Random();
             TipoPersonaje Aux = TipoPersonaje.Humano;
             switch (comboBox1.SelectedItem)
             {
@@ -73,11 +78,15 @@ namespace JuegoRol
                 default:
                     break;
             }
+
+            string equipamiento = Equipamientos[random.Next(0, Equipamientos.Count)].Name; 
+
             Personaje NuevoPersonaje = new Personaje(txt_Nombre.Text.Trim(),
                                                      Aux,
                                                      txt_Apodo.Text.Trim(),
                                                      dt_nacimiento.Value,
-                                                     Convert.ToInt32(num_edad.Value));
+                                                     Convert.ToInt32(num_edad.Value),
+                                                     equipamiento);
             return NuevoPersonaje;
 
         }
@@ -120,7 +129,7 @@ namespace JuegoRol
         {
             foreach (Personaje persona in Personajes)
             {
-                listbox_personajes.Items.Add(persona.MostrarPersonaje());
+                listbox_personajes.Items.Add(persona.ToString());
             }
         }
     }

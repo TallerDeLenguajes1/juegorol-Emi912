@@ -8,8 +8,16 @@ using System.Net;
 
 namespace JuegoRol.Modelos
 {
-    class Api
+    class ApiDeEquipamiento
     {
+        public List<Equipment> ListadoDeEquipamiento { get; set; }
+
+
+        public ApiDeEquipamiento()
+        {
+            ListadoDeEquipamiento = GetEquipment();
+        }
+
         public static List<Equipment> GetEquipment()
         {
             var url = "https://www.dnd5eapi.co/api/equipment-categories/weapon";

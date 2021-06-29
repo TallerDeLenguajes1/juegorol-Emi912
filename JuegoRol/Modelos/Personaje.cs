@@ -33,7 +33,7 @@ namespace JuegoRol
         private int nivel;
         private int fuerza;
 
-        public Personaje(string nombre, TipoPersonaje tipo, string apodo, DateTime _fechaDeNacimiento, int edad)
+        public Personaje(string nombre, TipoPersonaje tipo, string apodo, DateTime _fechaDeNacimiento, int edad, string equipamiento)
         {
             Random random = new Random();
             Nombre = nombre;
@@ -47,7 +47,7 @@ namespace JuegoRol
             Armadura = random.Next(1, 10);
             Fuerza = random.Next(1, 10);
             Nivel = 1;
-            Equipacion = Api.GetEquipment()[random.Next(0,60)].Name;
+            Equipacion = equipamiento; 
         }
 
         public void Ataque(Personaje enemigo) {
