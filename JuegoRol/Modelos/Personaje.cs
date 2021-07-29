@@ -33,6 +33,10 @@ namespace JuegoRol
         private int nivel;
         private int fuerza;
 
+        public Personaje()
+        {
+
+        }
         public Personaje(string nombre, TipoPersonaje tipo, string apodo, DateTime _fechaDeNacimiento, int edad, string equipamiento)
         {
             Random random = new Random();

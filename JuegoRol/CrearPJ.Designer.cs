@@ -43,6 +43,9 @@ namespace JuegoRol
             this.listbox_personajes = new System.Windows.Forms.ListBox();
             this.btn_pelea = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_random = new System.Windows.Forms.Button();
+            this.btn_campeon = new System.Windows.Forms.Button();
+            this.btn_delCampeon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.num_edad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,7 +151,7 @@ namespace JuegoRol
             // 
             // btn_pelea
             // 
-            this.btn_pelea.Location = new System.Drawing.Point(292, 269);
+            this.btn_pelea.Location = new System.Drawing.Point(623, 412);
             this.btn_pelea.Name = "btn_pelea";
             this.btn_pelea.Size = new System.Drawing.Size(75, 23);
             this.btn_pelea.TabIndex = 13;
@@ -166,11 +169,45 @@ namespace JuegoRol
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
+            // btn_random
+            // 
+            this.btn_random.Location = new System.Drawing.Point(298, 269);
+            this.btn_random.Name = "btn_random";
+            this.btn_random.Size = new System.Drawing.Size(75, 23);
+            this.btn_random.TabIndex = 15;
+            this.btn_random.Text = "Random";
+            this.btn_random.UseVisualStyleBackColor = true;
+            this.btn_random.Click += new System.EventHandler(this.btn_random_Click);
+            // 
+            // btn_campeon
+            // 
+            this.btn_campeon.Location = new System.Drawing.Point(893, 178);
+            this.btn_campeon.Name = "btn_campeon";
+            this.btn_campeon.Size = new System.Drawing.Size(75, 85);
+            this.btn_campeon.TabIndex = 16;
+            this.btn_campeon.Text = "Ultimo Campeon";
+            this.btn_campeon.UseVisualStyleBackColor = true;
+            this.btn_campeon.Click += new System.EventHandler(this.btn_campeon_Click);
+            // 
+            // btn_delCampeon
+            // 
+            this.btn_delCampeon.Enabled = false;
+            this.btn_delCampeon.Location = new System.Drawing.Point(893, 269);
+            this.btn_delCampeon.Name = "btn_delCampeon";
+            this.btn_delCampeon.Size = new System.Drawing.Size(75, 91);
+            this.btn_delCampeon.TabIndex = 17;
+            this.btn_delCampeon.Text = "Borrar Ultimo Campeon";
+            this.btn_delCampeon.UseVisualStyleBackColor = true;
+            this.btn_delCampeon.Click += new System.EventHandler(this.btn_delCampeon_Click);
+            // 
             // CrearPJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1103, 450);
+            this.Controls.Add(this.btn_delCampeon);
+            this.Controls.Add(this.btn_campeon);
+            this.Controls.Add(this.btn_random);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_pelea);
             this.Controls.Add(this.listbox_personajes);
@@ -209,6 +246,9 @@ namespace JuegoRol
         private System.Windows.Forms.ListBox listbox_personajes;
         private System.Windows.Forms.Button btn_pelea;
         private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.Button btn_random;
+        private System.Windows.Forms.Button btn_campeon;
+        private System.Windows.Forms.Button btn_delCampeon;
     }
 }
 

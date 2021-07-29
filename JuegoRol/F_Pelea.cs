@@ -31,23 +31,23 @@ namespace JuegoRol
                 if (Peleadores[0].Salud > Peleadores[1].Salud)
                 {
                     MessageBox.Show("El ganador del combate es " + Peleadores[0].Apodo, "Ganador");
-                    Peleadores[0].Salud = 100;
-                    Peleadores[0].Nivel++;
+                   
+                    RecuperarSalud(Peleadores[0]);
                     Peleadores.RemoveAt(1);
-                    btn_atacar1.Enabled = true;
-                    btn_atacar2.Enabled = false;
-                    ContClick = 0;
+
+                    ReiniciarBotones();
+                    ContadorRounds();
+
 
 
                 }
                 else
                 {
                     MessageBox.Show("El ganador del combate es " + Peleadores[1].Apodo, "Ganador");
-                    Peleadores[1].Salud = 100;
-                    Peleadores[1].Nivel++;
+                    RecuperarSalud(Peleadores[1]);
                     Peleadores.RemoveAt(0);
-                    ContClick = 0;
-
+                    ReiniciarBotones();
+                    ContadorRounds();
                 }
             }
             if (Peleadores.Count == 1)
@@ -64,10 +64,25 @@ namespace JuegoRol
 
             }
 
-
-
         }
 
+        private void ReiniciarBotones()
+        {
+            btn_atacar1.Enabled = true;
+            btn_atacar2.Enabled = false;
+            ContClick = 0;
+        }
+
+        private void RecuperarSalud(Personaje personaje)
+        {
+            personaje.Salud = 100;
+            personaje.Nivel++;
+        }
+
+        private bool IsGanador()
+        {
+            return ContClick == 3 || Peleadores[0].Salud <= 0 || Peleadores[1].Salud <= 0;
+        }
         private void GuardarGanadorJSON(Personaje Ganador)
         {
             string JsonString = JsonSerializer.Serialize(Ganador);
@@ -76,6 +91,7 @@ namespace JuegoRol
             {
                 streamWriter.WriteLine(JsonString);
                 streamWriter.Close();
+                
             }
         }
 
@@ -90,10 +106,7 @@ namespace JuegoRol
 
         }
 
-        private bool IsGanador()
-        {
-            return ContClick == 3 || Peleadores[0].Salud <= 0 || Peleadores[1].Salud <= 0;
-        }
+     
         private void ActualizarDatos(List<Personaje> Peleadores)
         {
             lbl_apodo.Text = Peleadores[0].Apodo;
@@ -137,20 +150,45 @@ namespace JuegoRol
         public void btn_atacar1_Click(object sender, EventArgs e)
         {
             Ataque_izq(Peleadores);
-            btn_atacar1.Enabled = false;
-            btn_atacar2.Enabled = true;
+            CambiarTurno();
             ActualizarDatos(Peleadores);
             EvaluarGanador(Peleadores);
+        }
+
+        private void CambiarTurno()
+        {
+            if (btn_atacar2.Enabled == false)
+            {
+                btn_atacar1.Enabled = false;
+                btn_atacar2.Enabled = true;
+            }
+            else
+            {
+                btn_atacar1.Enabled = true;
+                btn_atacar2.Enabled = false;
+            }
         }
 
         private void btn_atacar2_Click(object sender, EventArgs e)
         {
             Ataque_der(Peleadores);
-            btn_atacar1.Enabled = true;
-            btn_atacar2.Enabled = false;
+            CambiarTurno();
             ActualizarDatos(Peleadores);
             ContClick++;
+            ContadorRounds();
             EvaluarGanador(Peleadores);
+        }
+
+        private void ContadorRounds()
+        {
+            int aux = ContClick;
+            aux++;
+            if (aux <= 3)
+            {
+                lbl_round.Text = aux.ToString();
+            }
+           
+            
         }
     }
 

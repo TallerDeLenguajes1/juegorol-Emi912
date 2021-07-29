@@ -71,6 +71,8 @@ namespace JuegoRol
             this.lbl_arma = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbl_ene_arma = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lbl_round = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_apodo
@@ -462,11 +464,33 @@ namespace JuegoRol
             this.lbl_ene_arma.TabIndex = 43;
             this.lbl_ene_arma.Text = "label11";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(316, 270);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(81, 25);
+            this.label15.TabIndex = 44;
+            this.label15.Text = "ROUND";
+            // 
+            // lbl_round
+            // 
+            this.lbl_round.AutoSize = true;
+            this.lbl_round.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl_round.Location = new System.Drawing.Point(344, 295);
+            this.lbl_round.Name = "lbl_round";
+            this.lbl_round.Size = new System.Drawing.Size(24, 28);
+            this.lbl_round.TabIndex = 45;
+            this.lbl_round.Text = "1";
+            // 
             // F_Pelea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 450);
+            this.Controls.Add(this.lbl_round);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.lbl_ene_arma);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.lbl_arma);
@@ -559,5 +583,7 @@ namespace JuegoRol
         private System.Windows.Forms.Label lbl_arma;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbl_ene_arma;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbl_round;
     }
 }
