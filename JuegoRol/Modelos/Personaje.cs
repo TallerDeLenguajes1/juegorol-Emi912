@@ -56,13 +56,13 @@ namespace JuegoRol
 
         public void Ataque(Personaje enemigo) {
             Random aleatorio = new Random();
-            //int poderdisparo = Destreza * Fuerza * Nivel;
-            //int efectividaddisparo = (aleatorio.Next(1, 100));
-            //int valorataque = poderdisparo * efectividaddisparo;
-            //int poderdefensa = enemigo.Armadura * enemigo.Velocidad;
-            //int dañoprovocado = (((valorataque * efectividaddisparo) - poderdefensa) / 50000) * 100;
+            int poderdisparo = Destreza * Fuerza * Nivel;
+            int efectividaddisparo = (aleatorio.Next(1, 50));
+            int valorataque = poderdisparo * efectividaddisparo;
+            int poderdefensa = enemigo.Armadura * enemigo.Velocidad;
+            int damageprovocado = ((valorataque * efectividaddisparo) - poderdefensa) / 500;
 
-            enemigo.Salud -= aleatorio.Next(0,50);
+            enemigo.Salud -= damageprovocado;
             
         }
 

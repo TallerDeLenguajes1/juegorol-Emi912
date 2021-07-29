@@ -534,7 +534,7 @@ namespace JuegoRol
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbl_apodo);
             this.Name = "F_Pelea";
-            this.Text = "Form1";
+            this.Text = "¡Pelea!";
             this.ResumeLayout(false);
             this.PerformLayout();
 

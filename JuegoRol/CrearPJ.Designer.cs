@@ -223,7 +223,7 @@ namespace JuegoRol
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CrearPJ";
-            this.Text = "Form1";
+            this.Text = "Creador de Personajes";
             ((System.ComponentModel.ISupportInitialize)(this.num_edad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

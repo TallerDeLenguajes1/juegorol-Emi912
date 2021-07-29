@@ -40,9 +40,6 @@ namespace JuegoRol
                 btn_delCampeon.Enabled = true;
             }
 
-            
-            
-
         }
 
         private void btn_crear_Click(object sender, EventArgs e)
@@ -171,10 +168,12 @@ namespace JuegoRol
 
             DateTime fechaAleatoria = CalcularFechaAleatoria();     //Calculo fecha de nacimiento aleatoria
 
-            int edad = DateTime.Today.AddTicks(-fechaAleatoria.Ticks).Year - 1; // Calculo de la edad
+            int edad = DateTime.Today.AddTicks(-fechaAleatoria.Ticks).Year; // Calculo de la edad
 
-            Personaje pjAleatorio = new Personaje(nombres[random.Next(0, nombres.Length)],aux,
-                                apodos[random.Next(0, apodos.Length)], fechaAleatoria, edad, equipamiento);
+            string nombreAleatorio = nombres[random.Next(0, nombres.Length)]; //Nombre aleatorio    
+            string apodoAleatorio = apodos[random.Next(0, apodos.Length)];     //Apodo Aleatorio
+
+            Personaje pjAleatorio = new Personaje(nombreAleatorio,aux, apodoAleatorio, fechaAleatoria, edad, equipamiento);
 
 
             return pjAleatorio;
@@ -184,7 +183,7 @@ namespace JuegoRol
 
         private DateTime CalcularFechaAleatoria()
         {
-            DateTime start = new DateTime(1995, 1, 1); 
+            DateTime start = new DateTime(1721, 1, 1); 
             Random random = new Random(); 
             int range = (DateTime.Today - start).Days; 
             return start.AddDays(random.Next(range));
