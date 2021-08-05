@@ -114,8 +114,8 @@ namespace JuegoRol
             {
                 F_Pelea pelea = new F_Pelea(Personajes);
                 pelea.ShowDialog();
-                btn_delCampeon.Enabled = true;
                 listbox_personajes.Items.Clear();
+                btn_delCampeon.Enabled = true;
                 cargarDatosAListbox();
 
             }
@@ -214,7 +214,9 @@ namespace JuegoRol
                 $"Velocidad:{campeon.Velocidad}\n" +
                 $"Armadura:{campeon.Armadura}\n" +
                 $"Nivel:{campeon.Nivel}\n" +
-                $"Edad:{campeon.Edad}");
+                $"Edad:{campeon.Edad}\n" +
+                $"Racha de Victorias: {campeon.Racha}");
+                
         }
 
         private Personaje LeerCampeon()
@@ -237,5 +239,7 @@ namespace JuegoRol
             }
             
         }
+
+
     }
 }

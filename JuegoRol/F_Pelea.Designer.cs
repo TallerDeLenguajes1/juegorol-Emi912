@@ -79,7 +79,7 @@ namespace JuegoRol
             // 
             this.lbl_apodo.AutoSize = true;
             this.lbl_apodo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_apodo.Location = new System.Drawing.Point(263, 68);
+            this.lbl_apodo.Location = new System.Drawing.Point(239, 68);
             this.lbl_apodo.Name = "lbl_apodo";
             this.lbl_apodo.Size = new System.Drawing.Size(65, 28);
             this.lbl_apodo.TabIndex = 1;
@@ -359,7 +359,7 @@ namespace JuegoRol
             // 
             this.lbl_ene_apodo.AutoSize = true;
             this.lbl_ene_apodo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_ene_apodo.Location = new System.Drawing.Point(364, 68);
+            this.lbl_ene_apodo.Location = new System.Drawing.Point(384, 68);
             this.lbl_ene_apodo.Name = "lbl_ene_apodo";
             this.lbl_ene_apodo.Size = new System.Drawing.Size(65, 28);
             this.lbl_ene_apodo.TabIndex = 18;
@@ -369,7 +369,7 @@ namespace JuegoRol
             // 
             this.lbl_salud.AutoSize = true;
             this.lbl_salud.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_salud.Location = new System.Drawing.Point(274, 138);
+            this.lbl_salud.Location = new System.Drawing.Point(241, 128);
             this.lbl_salud.Name = "lbl_salud";
             this.lbl_salud.Size = new System.Drawing.Size(63, 25);
             this.lbl_salud.TabIndex = 34;
@@ -379,7 +379,7 @@ namespace JuegoRol
             // 
             this.lbl_ene_salud.AutoSize = true;
             this.lbl_ene_salud.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_ene_salud.Location = new System.Drawing.Point(364, 138);
+            this.lbl_ene_salud.Location = new System.Drawing.Point(382, 138);
             this.lbl_ene_salud.Name = "lbl_ene_salud";
             this.lbl_ene_salud.Size = new System.Drawing.Size(63, 25);
             this.lbl_ene_salud.TabIndex = 35;
@@ -390,7 +390,7 @@ namespace JuegoRol
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(263, 96);
+            this.label2.Location = new System.Drawing.Point(239, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 28);
             this.label2.TabIndex = 36;
@@ -401,7 +401,7 @@ namespace JuegoRol
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(364, 96);
+            this.label7.Location = new System.Drawing.Point(384, 96);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 28);
             this.label7.TabIndex = 37;
@@ -409,7 +409,7 @@ namespace JuegoRol
             // 
             // btn_atacar1
             // 
-            this.btn_atacar1.Location = new System.Drawing.Point(239, 203);
+            this.btn_atacar1.Location = new System.Drawing.Point(220, 179);
             this.btn_atacar1.Name = "btn_atacar1";
             this.btn_atacar1.Size = new System.Drawing.Size(107, 46);
             this.btn_atacar1.TabIndex = 38;
@@ -420,7 +420,7 @@ namespace JuegoRol
             // btn_atacar2
             // 
             this.btn_atacar2.Enabled = false;
-            this.btn_atacar2.Location = new System.Drawing.Point(364, 203);
+            this.btn_atacar2.Location = new System.Drawing.Point(364, 179);
             this.btn_atacar2.Name = "btn_atacar2";
             this.btn_atacar2.Size = new System.Drawing.Size(122, 46);
             this.btn_atacar2.TabIndex = 39;
@@ -468,7 +468,7 @@ namespace JuegoRol
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(316, 270);
+            this.label15.Location = new System.Drawing.Point(308, 250);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(81, 25);
             this.label15.TabIndex = 44;
@@ -478,7 +478,7 @@ namespace JuegoRol
             // 
             this.lbl_round.AutoSize = true;
             this.lbl_round.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_round.Location = new System.Drawing.Point(344, 295);
+            this.lbl_round.Location = new System.Drawing.Point(332, 278);
             this.lbl_round.Name = "lbl_round";
             this.lbl_round.Size = new System.Drawing.Size(24, 28);
             this.lbl_round.TabIndex = 45;
@@ -535,6 +535,8 @@ namespace JuegoRol
             this.Controls.Add(this.lbl_apodo);
             this.Name = "F_Pelea";
             this.Text = "¡Pelea!";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.F_Pelea_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.F_Pelea_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -55,8 +55,8 @@ namespace JuegoRol
                 MessageBox.Show("El Campeon es " + Peleadores[0].Apodo, "Campeón");
                 GuardarGanadorCSV(Peleadores[0]);
                 GuardarGanadorJSON(Peleadores[0]);
-            
-                this.Close();
+
+                this.Hide();
             }
             else
             {
@@ -76,7 +76,8 @@ namespace JuegoRol
         private void RecuperarSalud(Personaje personaje)
         {
             personaje.Salud = 100;
-            personaje.Nivel++;
+            personaje.Racha++;
+            
         }
 
         private bool IsGanador()
@@ -189,6 +190,30 @@ namespace JuegoRol
             }
            
             
+        }
+
+        private void F_Pelea_FormClosed(object sender, FormClosedEventArgs e)
+        {
+              
+        }
+
+        private void F_Pelea_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                var result = MessageBox.Show($"Si abandonas el campeon sera {Peleadores[0].Apodo} esta seguro?", "Esta seguro?", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    GuardarGanadorCSV(Peleadores[0]);
+                    GuardarGanadorJSON(Peleadores[0]);
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+       
         }
     }
 

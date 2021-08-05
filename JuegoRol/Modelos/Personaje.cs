@@ -25,6 +25,7 @@ namespace JuegoRol
         private int edad;
         private int salud = 100;
         private string equipacion;
+        private int racha;
     
 
         private int velocidad;
@@ -51,7 +52,8 @@ namespace JuegoRol
             Armadura = random.Next(1, 10);
             Fuerza = random.Next(1, 10);
             Nivel = 1;
-            Equipacion = equipamiento; 
+            Equipacion = equipamiento;
+            Racha = 0;
         }
 
         public void Ataque(Personaje enemigo) {
@@ -69,7 +71,7 @@ namespace JuegoRol
 
         public override string ToString()
         {
-           return "Nivel: " + Nivel + " Apodo: " + Apodo + " Tipo: " + Tipo + " Arma: " + Equipacion;
+           return "|| Nivel: " + Nivel + "|| Apodo: " + Apodo + "|| Tipo: " + Tipo + "|| Arma: " + Equipacion;
 
         }
 
@@ -85,5 +87,6 @@ namespace JuegoRol
         public TipoPersonaje Tipo { get => tipo; set => tipo = value; }
         public int Salud { get => salud; set => salud = value; }
         public string Equipacion { get => equipacion; set => equipacion = value; }
+        public int Racha { get => racha; set => racha = value; }
     }
 }
